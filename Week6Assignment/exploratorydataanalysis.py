@@ -66,14 +66,14 @@ class CovidEDA:
 
         fig, axes = plt.subplots(2, 2, figsize=(12, 5), sharey=True)
 
-        sns.histplot(data=df1, x='Confirmed', label='Confirmed', bins=30, color='blue', ax=axes[0,0])
+        sns.histplot(data=df1, x='Confirmed', label='Confirmed', kde=True, bins=30, color='blue', ax=axes[0,0])
         axes[0,0].set_title('Histogram of Confirmed Covid Cases - Original Data')
-        sns.histplot(data=df1, x='New cases', label='New cases', bins=30, color='green', ax=axes[0,1])
+        sns.histplot(data=df1, x='New cases', label='New cases', kde=True, bins=30, color='green', ax=axes[0,1])
         axes[0,1].set_title('Histogram of Covid New cases - Original Data')
 
-        sns.histplot(data=df2, x='Confirmed', label='Confirmed', bins=30, color='red', ax=axes[1,0])
+        sns.histplot(data=df2, x='Confirmed', label='Confirmed', kde=True, bins=30, color='red', ax=axes[1,0])
         axes[1,0].set_title('Histogram of Confirmed Covid Cases - Normalized Data')
-        sns.histplot(data=df2, x='New cases', label='New cases', bins=30, color='orange', ax=axes[1,1])
+        sns.histplot(data=df2, x='New cases', label='New cases', kde=True, bins=30, color='orange', ax=axes[1,1])
         axes[1,1].set_title('Histogram of Covid New cases - Normalized Data')
 
         plt.tight_layout()
